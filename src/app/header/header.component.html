@@ -1,0 +1,37 @@
+<div class="large" id="header">
+  <div id="logo">
+    <img src="../../assets/logo.png" alt="Rizkalla">
+  </div>
+  <div id="searchForm">
+    <div id="form">
+      <input #productName (keyup)="search(productName.value)" (focusout)="result = false" (keyup.enter)="result = false" placeholder="Enter keyword here..." id="productNameInput">
+      <button id="search"><i class="fa fa-search"></i></button>
+    </div>
+    <ul class="list-group" id="list" *ngIf="result">
+      <li class="list-group-item" *ngFor="let p of productsCase">
+        <a routerLink="" (click)="return;">{{p.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div id="cta">
+    <div id="wrapper">
+      <div id="cart">
+        <span>{{inCart}}</span>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </div>
+      <div id="profile">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div id="registration">
+          <div id="row1">
+            <a routerLink="" (click)="return;">Sign In</a>
+            <span>&nbsp;/&nbsp;</span>
+            <a routerLink="" (click)="return;"> Join Free</a>
+          </div>
+          <div id="row2">
+            <a routerLink="" (click)="return;">Welcome Guest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

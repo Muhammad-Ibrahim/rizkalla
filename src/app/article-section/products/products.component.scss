@@ -1,0 +1,81 @@
+.cardi {
+    width: 100%;
+    .product {
+        width: 30%;
+        display: inline-block;
+        margin: 10px 1.5%;
+    }
+    img {
+        width: 100%;
+        height: 281px;
+    }
+    .icons {
+        visibility: hidden;
+        position: relative;
+        top: -184px;
+        float: right;
+        display: grid;
+    }
+    .icons i.fa-search {
+        margin: 10px 0;
+    }
+    .icons i {
+        padding: 5px;
+        font-size: 18px;
+        color: #004a8f;
+        background: #ffd400;
+        cursor: pointer;
+    }
+    .info {
+        padding: 10px 30px 0;
+    }
+    .info .heading {
+        width: 100%;
+        display: inline-block;
+    }
+    .info .heading h5,
+    .info .heading i {
+        color: #004a8f;
+    }
+    .info .heading h5 {
+        float: left;
+    }    
+    .info .heading i {
+        padding-top: 4px;
+        float: right;
+    }
+    .info p {
+        font-size: 11px;
+        color: #999;
+    }
+    .info .price .oPrice {
+        float: left;
+        font-weight: 600;
+        text-decoration: line-through;
+        color: #000;
+    }
+    .info .price .offer {
+        float: right;
+        margin-right: 30px;
+        font-size: 14px;
+        color: #000;
+    }
+}
+.product:hover {
+    box-shadow: 0 0 15px rgba($color: #000000, $alpha: .4);
+    background: #f4f4f4;
+    .icons{
+        visibility: visible;
+    }
+}
+@media screen and (min-width: 391px) and (max-width: 580px) {
+    .cardi .product {
+        width: 47%;       
+    }
+}
+@media screen and (max-width: 390px) {
+    .cardi .product {
+        width: 67%;
+        margin: 10px 16.5%;        
+    }
+}

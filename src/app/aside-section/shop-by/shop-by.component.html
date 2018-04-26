@@ -1,0 +1,55 @@
+<div id="shopBy">
+  <section>SHOP BY</section>
+  
+  <div class="filter" (click)="toggleFilter(0)">
+    <span>CATEGORIES</span>
+    <i [ngClass]="headingCaret[0]"></i>
+  </div>
+  <div *ngIf="filter[0]">
+    <div *ngFor="let key of caKeys; let i = index">
+      <div class="key" (click)="toggleShowSub(i)">
+        <span>{{key}}</span>
+        <i [ngClass]="caret[i]"></i>
+      </div>
+      <div *ngIf="showSub[i]">
+        <ul class="subCat">
+          <li *ngFor="let item of categories[key]">
+            <a routerLink="" (click)="return;">{{item}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter" (click)="toggleFilter(1)">
+    <span>PRICE</span>
+    <i [ngClass]="headingCaret[2]"></i>
+  </div>
+  <div id="priceDiv" *ngIf="filter[1]">
+    <nouislider [connect]="true" [min]="2000" [max]="50000" [step]="1000" [(ngModel)]="priceRange" (ngModelChange)="priceChange($event)"></nouislider>
+    <div id="priceDetected">
+      <span id="start">{{priceRange[0]}} EGP</span>
+      <span id="end">{{priceRange[1]}} EGP</span>
+    </div>
+  </div>
+
+  <div class="filter" (click)="toggleFilter(2)">
+    <span>Color</span>
+    <i [ngClass]="headingCaret[2]"></i>
+  </div>
+  <div id="colorDiv" *ngIf="filter[2]">
+    <li class="colorSpan" *ngFor="let color of colors; let i = index" (click)="selectColor(i)" [ngStyle]="{'background': color}"></li>
+  </div>
+
+  <div class="filter" (click)="toggleFilter(3)">
+    <span>SIZE</span>
+    <i [ngClass]="headingCaret[3]"></i>
+  </div>
+  <div id="sizeDiv" *ngIf="filter[3]">
+    <nouislider [connect]="true" [min]="5" [max]="65" [step]="1" [(ngModel)]="sizeRange" (ngModelChange)="sizeChange($event)"></nouislider>
+    <div id="sizeDetected">
+      <span id="startSize">{{sizeRange[0]}} INCH</span>
+      <span id="endSize">{{sizeRange[1]}} INCH</span>
+    </div>
+  </div>
+</div>

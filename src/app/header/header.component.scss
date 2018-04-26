@@ -1,0 +1,145 @@
+#header {
+    width: calc(100% - 120px);
+    margin: 20px 60px;
+}
+.large {
+    display: inline-flex;
+}
+
+#logo, #searchForm, #cta {
+    width: 33.33%;
+}
+
+#logo img {
+    width: 190px;
+}
+
+#searchForm {
+    margin-top: 7px;
+}
+#form {
+    width: 100%;
+    display: inline-flex;
+}
+input {
+    width: 100%;
+    padding: 5px 0 5px 17px;
+    border: 1px solid #aaa;
+    border-right: 0;
+    background: #ededed;
+}
+#search {
+    position: relative;
+    right: 0;
+    border: 1px solid #aaa;
+    border-left: 0;
+    background: #ededed;
+    color: #aaa;
+}
+.list-group {
+    position: absolute;
+    width: 27.33%;
+    z-index: 9999;
+}
+.list-group-item {
+    cursor: pointer;
+}
+
+#cta > #wrapper {
+    display: inline-flex;
+    margin-left: 20%;
+}
+#cta i {
+    font-size: 26px;
+    color: #004a8f;
+}
+#cta #cart {
+    margin-top: 16px;
+}
+#cta #cart span {
+    position: relative;
+    padding: 4px 7px;
+    top: -21px;
+    right: -36px;
+    border-radius: 50%;
+    font-size: 10px;
+    background: #ffd400;
+}
+
+#cta #profile {
+    position: absolute;
+    right: 60px;
+    display: inline-flex;
+}
+#cta #profile i {
+    margin: 10px 10px;
+}
+#cta #profile #registration #row1 {
+    display: inline-flex;
+}
+#cta #profile #registration #row1 a,
+#cta #profile #registration #row1 span {
+    font-weight: 600;
+}
+#cta #profile #registration #row1 span {
+    color: #004a8f;
+}
+#cta #profile #registration #row2 a {
+    margin-left: 6px;
+}
+#cta #profile #registration a {
+    cursor: pointer;
+    color: #004a8f;
+}
+@media screen and (max-width: 935px) {
+    #cta #profile {
+        display: none;
+    }
+    #wrapper {
+        margin-left: 0 !important;
+    }
+    #cta {
+        width: 59.74px;
+        position: absolute;
+        right: 53px;
+    }
+    #searchForm {
+        position: absolute;
+        right: 113px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #header {
+        display: block;
+    }
+    #cta {
+        top: 20px;
+    }
+    #searchForm {
+        position: relative;
+        float: right;
+        top: 20px;
+        right: 0;
+        margin: 10px 0;
+        width: calc(100% - 64px);
+        padding: 0 1px;
+    }
+}
+@media screen and (max-width: 380px) {
+    #header {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+    #cta {
+        right: 13px;
+    }
+}
+@media screen and (max-width: 625px) {
+    #header {
+        width: calc(100% - 40px);
+        margin: 20px 20px;        
+    }
+    #cta {
+        right: 23px;
+    }
+}

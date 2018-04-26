@@ -1,0 +1,26 @@
+<div id="bestSellers">
+  <section>BEST SELLERS</section>
+  <div id="product" *ngFor="let p of products; let i = index">
+    <div id="info">
+      <div id="rateNname">
+        <div id="rate">
+          <span *ngFor="let star of stars; let s = index">
+            <i *ngIf="p.rate == s+.5; else full" class="fa fa-star-half-o" (click)="rateAs(i, s);"></i>
+            <ng-template #full>
+              <ng-container *ngIf="p.rate >= s+1; else unfilled">
+                <i class="fa fa-star" (click)="rateAs(i, s);"></i>
+              </ng-container>
+            </ng-template>
+            <ng-template #unfilled><i class="fa fa-star-o" (click)="rateAs(i, s);"></i></ng-template>
+          </span>
+        </div>
+        <p id="name">{{p.name}}</p>
+      </div>
+      <img [src]="p.imageUrl" [alt]="p.name">
+    </div>
+    <div id="price">
+      <span id="offer">EGP{{p.offer}}</span>
+      <span id="oPrice">EGP{{p.oPrice}}</span>
+    </div>
+  </div>
+</div>

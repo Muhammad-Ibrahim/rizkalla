@@ -1,0 +1,185 @@
+#nav {
+    width: calc(100% - 120px);
+    height: 64px;
+    margin: 0 60px;
+    padding: 20px 0 20px 15px;
+    display: inline-block;
+    background: #004a8f;
+    ul, ul button {
+        cursor: pointer;
+    }
+    ul:first-child {
+        display: inline-flex;
+        padding: 0;
+        list-style-type: none;
+        .dropdown button:after {
+            content: "\f0d7";
+            font-size: 10px;
+            font-family: "FontAwesome"
+        }
+        button {
+            margin: 0 5px;
+            padding: 0;
+            border: 0;
+            font-size: 12px;
+            background: transparent;
+            color: white;
+        }
+    }
+    ul .dropdown:first-child {
+        button {
+            margin-left: 0;
+        }
+    }
+    ul .dropdown:last-child {
+        button {
+            margin-right: 0;
+        }
+    }
+    > button {
+        float: right;
+        height: calc(100% + 40px);
+        margin-top: -20px;
+        border: 0;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    #offers {
+        background: transparent;
+        color: #ffd400;
+    }
+    #friday {
+        background: #000;
+        color: #fff;
+    }
+    @media screen and (min-width: 981px) and (max-width: 1080px) {
+        #friday {
+            display: none;
+        }
+        #offer {
+            width: 50px;
+        }
+    }
+    @media screen and (max-width: 980px) {
+        #friday, #offer {
+            display: none;
+        }
+    }    
+    @media screen and (min-width: 979px) {
+        .dropdown:hover {
+            > button, button span {
+                color: #ffd400;
+            }
+            ul.dropdown-menu {
+                display: block;
+            }
+        }
+    }
+}
+@media (min-width: 981px) and (max-width: 1080px) {
+    #friday {
+        display: none !important;
+    }
+    #offers {
+        width: 50px !important;
+    }
+}
+@media (max-width: 980px) {
+    #friday, #offers {
+        display: none !important;
+    }
+}    
+@media (min-width: 799px) {
+    .dropdown:hover {
+        > button, button span {
+            color: #ffd400 !important;
+        }
+        ul.dropdown-menu {
+            display: block !important;
+        }
+    }
+}
+@media (max-width: 979px) and (min-width: 800px) {
+    #nav {
+        height: 88px !important;
+    }
+}
+
+#menu {
+    display: none;
+}
+@media screen and (max-width: 799px) {
+    #nav {
+        display: none;
+    }
+    #menu {
+        display: block;
+    }
+}
+#menu {
+    width: calc(100% - 122px);
+    height: 56px;
+    margin: 0 61px;
+    padding: 9px 20px;
+    background: #004a8f;
+    ul, ul button {
+        cursor: pointer;
+    }
+    #bars {
+        font-size: 27px;
+    }
+    ul:first-child {
+        display: inline-flex;
+        padding: 0;
+        list-style-type: none;
+        button {
+            margin: 0 5px;
+            padding: 0;
+            border: 0;
+            font-size: 13px;
+            background: #004a8f;
+            color: white;
+        } 
+    }
+    ul .dropdown:first-child {
+        button {
+            margin-left: 0;
+        }
+    }
+    ul .dropdown:last-child {
+        button {
+            margin-right: 0;
+        }
+    }
+    ul.dropdown-menu {
+        top: 112%;
+        left: -21px;
+        display: block;
+        padding: 10px;
+        background-color: #004a8f; 
+    }
+    ul.dropdown-menu button {
+        margin: 8px 0;
+    }
+    ul.inner {
+        position: static;
+    }
+    ul.inner li {
+        font-size: 13px;
+        color: #fff;
+    }
+    > button {
+        float: right;
+        height: calc(100% + 40px);
+        margin-top: -20px;
+        border: 0;
+        cursor: pointer;
+        font-size: 12px;
+    }    
+}
+@media screen and (max-width: 625px) {
+    #menu {
+        width: calc(100% - 42px);
+        margin: 0 21px;        
+    }
+}

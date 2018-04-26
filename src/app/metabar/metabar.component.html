@@ -1,0 +1,41 @@
+<div id="metabar">
+  <div id="left">
+    <p>CALL US NOW: 022 222 222</p>
+    <div class="dropdown" id="language" dropdown>
+        <button dropdownToggle>
+          <span class="default">{{language}}</span>
+        </button>
+        <ul class="dropdown-menu" *dropdownMenu>
+          <li class="dropdown-item" *ngFor="let lang of languages; let i = index">
+            <a routerLink="" (click)="changeLang(i)">{{lang}}</a>
+          </li>
+        </ul>
+    </div>
+    <div class="dropdown" id="country" dropdown>
+      <button dropdownToggle>
+        <img id="flag" [src]="flag">
+        <span class="default">{{country}}</span>
+      </button>
+      <ul class="dropdown-menu" *dropdownMenu>
+        <li class="dropdown-item" *ngFor="let country of countries; let i = index">
+          <a routerLink="" (click)="changeCountry(i)">{{country.country}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="right">
+    <ul>
+      <div class="dropdown" dropdown>
+        <button dropdownToggle>
+          <span class="default">My Account</span>
+        </button>
+        <ul class="dropdown-menu" *dropdownMenu>
+          <li class="dropdown-item">Login</li>
+          <li class="dropdown-item">Signup</li>
+        </ul>
+      </div> |
+      <li><a routerLink="" (click)="return;">My Wishlist</a></li> |
+      <li><a routerLink="" (click)="return;">Checkout</a></li>
+    </ul>
+  </div>
+</div>

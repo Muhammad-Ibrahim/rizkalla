@@ -1,0 +1,35 @@
+#content {
+    width: calc(100% - 120px);
+    display: inline-flex;
+    margin: 15px 60px 30px;
+    app-aside {
+        width: 25%;
+        margin-right: 20px;
+    }
+    app-article {
+        width: calc(75% - 20px)
+    }
+}
+app-footer {
+    width: 100%;
+    display: grid;
+}
+@media screen and (max-width: 1000px) {
+    app-aside {
+        display: none;
+    }
+    app-article {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 740px) {
+    metabar {
+        display: none;
+    }
+}
+@media screen and (max-width: 625px) {
+    #content {
+        width: calc(100% - 40px);
+        margin: 15px 20px 30px;
+    }
+}

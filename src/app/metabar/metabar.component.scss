@@ -1,0 +1,58 @@
+#metabar {
+    height: 38.4px;
+    padding: 10px 60px;
+    background: #dedede;
+    color: #848484;
+    font-size: 12px;
+}
+
+#left {
+    display: inline-flex;
+    float: left;
+}
+#country #flag {
+    width: 18px;
+    height: 16px;
+    margin-top: -1px;
+}
+
+.dropdown button {
+    border: 0;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+}
+.dropdown button:active,
+.dropdown button:visited {
+    border: 0
+}
+.dropdown button:after {
+    content: "\f0d7";
+    font-family: "FontAwesome"
+}
+
+#left > *,
+#right ul > * {
+    margin: 0 10px;
+}
+#left > *:first-child,
+#right ul > *:first-child {
+    margin-left: 0;
+}
+#left > *:last-child,
+#right ul > *:last-child {
+    margin-right: 0;
+}
+
+#right {
+    float: right;
+    display: inline-flex;
+}
+#right > ul {
+    display: inline-flex;
+    list-style-type: none;
+    cursor: pointer;
+}
+#right ul.dropdown-menu > * {
+    margin: 0
+}

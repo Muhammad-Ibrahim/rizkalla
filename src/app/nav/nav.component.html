@@ -1,0 +1,37 @@
+<div id="nav">
+  <ul>
+    <div *ngFor="let key of caKeys" class="dropdown">
+      <button>
+        <span class="default">{{key}}</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let item of categories[key]" class="dropdown-item">{{item}}</li>
+      </ul>
+    </div>
+  </ul>
+  <button id="friday"><a routerLink (click)="return;">White Friday</a></button>
+  <button id="offers"><a routerLink (click)="return;">Special Offers</a></button>
+</div>
+
+<div id="menu">
+  <ul>
+    <div class="dropdown">
+      <button id="bars" (click)="mainMenu = !mainMenu; open = !open">
+          <span class="default">
+            <i *ngIf="!open" class="fa fa-bars" aria-hidden="true"></i>
+            <i *ngIf="open" class="fa fa-times" aria-hidden="true"></i>
+          </span>
+      </button>
+      <ul *ngIf="mainMenu" class="dropdown-menu">
+        <div *ngFor="let key of caKeys; let i =index" class="dropdown">
+          <button>
+            <span class="default" (click)="subMenu[i] = !subMenu[i]">{{key}}</span>
+          </button>
+          <ul *ngIf="subMenu[i]" class="dropdown-menu inner">
+            <li *ngFor="let item of categories[key]" class="dropdown-item">{{item}}</li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+  </ul>
+</div>

@@ -1,0 +1,21 @@
+<div class="cardi">
+  <div *ngFor="let product of products; let i = index" class="product">
+    <img [src]="product.imageUrl" alt="">
+    <div class="icons">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <i class="fa fa-heart" aria-hidden="true"></i>
+    </div>
+    <div class="info">
+      <div class="heading">
+        <h5>{{product.name}}</h5>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </div>
+      <p>{{product.desc}}</p>
+      <div class="price">
+        <p class="oPrice">EGP{{product.oPrice}}</p>
+        <p class="offer">EGP{{product.offer}}</p>
+      </div>
+    </div>
+  </div>
+</div>
