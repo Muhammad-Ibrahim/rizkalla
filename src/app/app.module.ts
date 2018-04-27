@@ -14,7 +14,6 @@ import { AsideComponent } from './aside-section/aside/aside.component';
 import { ArticleComponent } from './article-section/article/article.component';
 
 import { DataService } from './data.service';
-import { FilterPipe } from './filter.pipe';
 
 import { ShopByComponent } from './aside-section/shop-by/shop-by.component';
 import { BestSellersComponent } from './aside-section/best-sellers/best-sellers.component';
@@ -35,7 +34,6 @@ import { FooterComponent } from './footer/footer.component';
     BestSellersComponent,
     CustomServicesComponent,
     ProductsComponent,
-    FilterPipe,
     FooterComponent 
   ],
   imports: [

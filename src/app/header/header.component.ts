@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { DataService } from '../data.service'
+import { DataService } from '../data.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,8 @@ export class HeaderComponent implements OnInit {
   inCart: number = 0
   products: Object
   searchText: string
+
+  productName = new FormControl()
 
   constructor(private data: DataService) {
     this.data.currentSharedProducts.subscribe(currentSharedProducts => {
@@ -43,6 +46,10 @@ export class HeaderComponent implements OnInit {
                           )
     if(this.productsCase.length > 0) this.result = true
     this.data.nChangeSharedProducts(this.productsCase)
+  }
+
+  autoComplete(i) {
+    this.productName = this.products[i].name
   }
 
   ngOnInit() {

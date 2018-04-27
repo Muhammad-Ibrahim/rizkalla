@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service'
-import { NouisliderModule } from 'ng2-nouislider';
 import { NgForm } from '@angular/forms';
 
 @Component({
