@@ -8,14 +8,23 @@ import { DataService } from '../../data.service'
 })
 export class ProductsComponent implements OnInit {
   products: Object
+  cart: Array<string>
 
   constructor(private data: DataService) {
     this.data.currentSharedProducts.subscribe(currentSharedProducts => {
       this.products = currentSharedProducts
     });
+    this.data.currentCart.subscribe(currentCart => {
+      this.cart = currentCart
+    });
   }
 
   ngOnInit() {
+  }
+
+  addToCart(productName: string) {
+    this.cart.push(productName)
+    this.data.changeCurrentCart(this.cart)
   }
 
 }

@@ -16,8 +16,14 @@
   <div id="cta">
     <div id="wrapper">
       <div id="cart">
-        <span>{{inCart}}</span>
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <span (click)="openCart()">{{inCart}}</span>
+        <i (click)="openCart()" class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <ul id="cartList" class="list-group" *ngIf="cartLoadded">
+          <li class="list-group-item" *ngFor="let c of cart; let i = index">
+            {{c}}<i (click)="removeFromCart(i)" class="fa fa-times" aria-hidden="true"></i>
+          </li>
+          <button class="btn btn-primary" (click)="return;">Go to Cart</button>
+        </ul>
       </div>
       <div id="profile">
         <i class="fa fa-user" aria-hidden="true"></i>

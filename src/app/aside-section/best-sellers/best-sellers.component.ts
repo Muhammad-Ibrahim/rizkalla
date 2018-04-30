@@ -17,7 +17,6 @@ export class BestSellersComponent implements OnInit {
     for (let i = 0; i < this.products.length; i++) {
       this.products[i].rate = Math.round(this.products[i].rate*2)/2
     }
-    console.log(this.products)
   }
 
   ngOnInit() {

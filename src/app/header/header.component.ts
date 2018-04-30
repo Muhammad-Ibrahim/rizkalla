@@ -10,10 +10,12 @@ import { FormControl } from '@angular/forms';
 })
 
 export class HeaderComponent implements OnInit {
+  cart: Array<string>
+  cartLoadded: boolean = false
   productsCase: any
   result: boolean = false
 
-  inCart: number = 0
+  inCart: number
   products: Object
   searchText: string
 
@@ -22,6 +24,10 @@ export class HeaderComponent implements OnInit {
   constructor(private data: DataService) {
     this.data.currentSharedProducts.subscribe(currentSharedProducts => {
       this.products = currentSharedProducts
+    });
+    this.data.currentCart.subscribe(currentCart => {
+      this.cart = currentCart
+      this.inCart = this.cart.length
     });
   }
 
@@ -57,6 +63,18 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  removeFromCart(i) {
+    this.cart.splice(i, 1)
+    if(this.cart.length < 1) this.cartLoadded = false
+    this.data.changeCurrentCart(this.cart)
+  }
+
+  openCart() {
+    if (this.cartLoadded) this.cartLoadded = false
+    else if (this.cart.length > 0) this.cartLoadded = true
+    else return
   }
 
 }

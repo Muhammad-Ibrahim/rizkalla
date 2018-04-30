@@ -23,10 +23,10 @@ export class DataService {
   ]
 
   private sharedProducts = new BehaviorSubject<any>(this._products)
-  private searching = new BehaviorSubject<boolean>(false)
+  private cart = new BehaviorSubject<Array<string>>([])
 
   currentSharedProducts = this.sharedProducts.asObservable()
-  currentSearching = this.searching.asObservable()
+  currentCart = this.cart.asObservable()
 
   nCurrent: any
   pCurrent: any
@@ -79,8 +79,8 @@ export class DataService {
     this.sharedProducts.next(productsCase)
   }
   
-  changeCurrentSearching(searching: boolean) {
-    this.searching.next(searching)
+  changeCurrentCart(cart: Array<string>) {
+    this.cart.next(cart)
   }
 
 }

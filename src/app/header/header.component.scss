@@ -55,7 +55,9 @@ input {
     color: #004a8f;
 }
 #cta #cart {
+    width: 53px;
     margin-top: 16px;
+    cursor: pointer;
 }
 #cta #cart span {
     position: relative;
@@ -104,6 +106,10 @@ input {
         position: absolute;
         right: 53px;
     }
+    #cartList {
+        position: relative;
+        right: 167px !important;
+    }
     #searchForm {
         position: absolute;
         right: 113px;
@@ -146,15 +152,6 @@ input {
         }
     }
 }
-@media screen and (max-width: 380px) {
-    #header {
-        width: calc(100% - 40px);
-        margin: 20px;
-    }
-    #cta {
-        right: 13px;
-    }
-}
 @media screen and (max-width: 625px) {
     #header {
         width: calc(100% - 40px);
@@ -163,7 +160,39 @@ input {
     #cta {
         right: 23px;
     }
+    #cartList {
+        position: relative;
+        right: 130px !important;
+    }
+}
+@media screen and (max-width: 380px) {
+    #header {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+    #cta {
+        right: 13px;
+    }
+    #cartList {
+        position: relative;
+        right: 120px !important;
+    }
 }
 #list {
     width: 100%;
+}
+#cartList {
+    width: 220px;
+    right: 190px;
+    background: #eee;
+    i {
+        position: absolute;
+        right: 13px;
+        top: 14px;
+        font-size: 18px;
+        color: #777;
+    }
+    button {
+        margin: 7px 50px;
+    }
 }
