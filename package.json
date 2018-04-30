@@ -25,6 +25,7 @@
     "@angular/router": "^5.2.0",
     "bootstrap": "^4.1.0",
     "core-js": "^2.4.1",
+    "ng2-completer": "^1.6.3",
     "ng2-nouislider": "^1.7.7",
     "ngx-bootstrap": "^2.0.4",
     "nouislider": "^11.1.0",

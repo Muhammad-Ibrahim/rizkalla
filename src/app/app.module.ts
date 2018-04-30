@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppBootstrapModule } from './app-bootstrap.module';
 import { NouisliderModule } from 'ng2-nouislider';
+import { Ng2CompleterModule } from "ng2-completer";
 
 import { AppComponent } from './app.component';
 import { MetabarComponent } from './metabar/metabar.component';
@@ -40,7 +41,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     FormsModule,
     AppBootstrapModule,
-    NouisliderModule
+    NouisliderModule,
+    Ng2CompleterModule
   ],
   providers: [
     DataService

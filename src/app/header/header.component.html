@@ -4,12 +4,12 @@
   </div>
   <div id="searchForm">
     <div id="form">
-      <input #productName (keyup)="search(productName.value)" (focusout)="result = false" (keyup.enter)="result = false" placeholder="Enter keyword here..." id="productNameInput">
+      <input #productName (keyup)="search(productName.value)" (focusout)="focusout()" (keyup.enter)="result = false" placeholder="Enter keyword here..." id="productNameInput">
       <button id="search"><i class="fa fa-search"></i></button>
     </div>
     <ul class="list-group" id="list" *ngIf="result">
-      <li class="list-group-item" *ngFor="let p of productsCase">
-        <a routerLink="" (click)="return;">{{p.name}}</a>
+      <li class="list-group-item" *ngFor="let p of productsCase" (click)="productName.value=p.name; result=false">
+        {{p.name}}
       </li>
     </ul>
   </div>

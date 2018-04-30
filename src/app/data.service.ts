@@ -30,7 +30,7 @@ export class DataService {
 
   nCurrent: any
   pCurrent: any
-  lastEvent: any
+  lastEvent = [0, 10000000]
 
   constructor() {
   }
@@ -54,7 +54,7 @@ export class DataService {
   }
   clearSearchEffect() {
     this.nCurrent = null
-    this.changeSharedProducts(this._products) 
+    this.changeSharedProducts(this._products)
     this.pChangeSharedProducts(this.pCurrent, this.lastEvent)   
   }
 

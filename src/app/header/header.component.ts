@@ -34,6 +34,7 @@ export class HeaderComponent implements OnInit {
   search(productName: string) {
     this.products = this.data.products
     if (productName === '' && this.stop == 0) {
+      this.result = false
       this.clearSearchEffect()
       this.stop = 1
       return
@@ -44,12 +45,15 @@ export class HeaderComponent implements OnInit {
                             x.name.toLowerCase()
                             .startsWith(productName.toLowerCase())
                           )
-    if(this.productsCase.length > 0) this.result = true
-    this.data.nChangeSharedProducts(this.productsCase)
+    if(this.productsCase.length > 0) {
+      this.result = true
+      this.data.nChangeSharedProducts(this.productsCase)
+    }
+    else return
   }
 
-  autoComplete(i) {
-    this.productName = this.products[i].name
+  focusout() {
+    setTimeout(() => this.result=false, 100)
   }
 
   ngOnInit() {
