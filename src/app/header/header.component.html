@@ -22,19 +22,19 @@
           <li class="list-group-item" *ngFor="let c of cart; let i = index">
             {{c}}<i (click)="removeFromCart(i)" class="fa fa-times" aria-hidden="true"></i>
           </li>
-          <button class="btn btn-primary" (click)="return;">Go to Cart</button>
+          <button class="btn btn-primary">Go to Cart</button>
         </ul>
       </div>
       <div id="profile">
         <i class="fa fa-user" aria-hidden="true"></i>
         <div id="registration">
           <div id="row1">
-            <a routerLink="" (click)="return;">Sign In</a>
+            <a routerLink="">Sign In</a>
             <span>&nbsp;/&nbsp;</span>
-            <a routerLink="" (click)="return;"> Join Free</a>
+            <a routerLink=""> Join Free</a>
           </div>
           <div id="row2">
-            <a routerLink="" (click)="return;">Welcome Guest</a>
+            <a routerLink="">Welcome Guest</a>
           </div>
         </div>
       </div>
